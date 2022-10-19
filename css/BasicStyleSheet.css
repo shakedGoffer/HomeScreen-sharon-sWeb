@@ -1,0 +1,207 @@
+  
+ /* CSS Document */
+  
+  
+  /* Round image */
+	.circular_image 
+	{
+	  width: 205px;
+	  height: 200px;
+	  border-radius: 50%;
+	  overflow: hidden;
+	  background-color: blue;
+	  margin:5px 10px;
+	  display:inline-block;
+	  vertical-align:middle;
+	}
+	.circular_image img
+	{
+	  width:100%;
+	}
+	
+	/* center an element */
+	.center
+	{
+		text-align:center;
+		align-self:center;
+		vertical-align:center;
+		margin:auto;
+		left:50%;
+		right:50%;
+		justify-content: center;
+		padding:0px;
+		
+		
+	}
+	
+	*,*:after,*:before
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		user-select: none;
+		cursor: default;
+	}
+
+	/* body- no space in tha sids*/
+	html,body 
+	{
+		margin:0;
+		padding:0;
+	}
+	
+	/* header */
+	header 
+	{
+		/*position: sticky;*/
+		top: 0;
+		background-color:white;
+		display: table;
+		width: 100%;
+		pointer-events: none;
+		z-index:10;
+	}
+	
+	
+	
+	/* Google Font CDN Link */
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+		*{
+		  margin: 0;
+		  padding: 0;
+		 
+		}
+	
+	* {
+		font-family: "Poppins" , sans-serif;
+	}
+	
+
+	/* header topick */
+	header .topick 
+	{
+		text-align:center;
+		font-size:48px;
+		width:70%;
+		overflow: auto;
+		margin: auto;
+	}
+	
+	
+	
+	/* header name(sharon anavi goffer) */
+	header #name  
+	{
+		text-align: center;
+		color:blue;
+		font-size:17px;
+		width:85%;
+		overflow: auto;
+		margin: auto;
+
+	}
+	header #name  a
+	{
+		text-decoration: none;
+		z-index:11;
+
+	}
+	
+	/* header logo */
+	header .iconImg
+	{
+		width: 120px;
+		height: 120px;
+		position:absolute;
+		top: 0px;
+		left: 0px;
+	}
+	
+	/*
+	.mybutton
+	{
+		z-index:10;
+	}
+	*/
+	
+
+	
+
+	/* Media Queries for header*/
+	
+	@media (max-width:1350px)
+	{
+		header .iconImg
+		{
+			width: 115px;
+			height: 115px;
+		}
+		
+	}
+	
+	@media (max-width:1230px)
+	{
+		header .topick {font-size:42px;}
+		header .iconImg
+		{
+			width: 100px;
+			height: 100px;
+		}
+	}
+	
+	@media (max-width:820px)
+	{	
+		header .topick {font-size:35px;}
+		header #name {font-size:18px;}
+		header .iconImg
+		{
+			width: 80px;
+			height: 80px;
+		}
+		
+	}
+	
+	/* Phone Menu Queries*/
+	@media (max-width:700px)
+	{
+		header .topick {font-size:30px; width:80%;}
+		header #name {font-size:18px;}
+		header .iconImg
+		{
+			display:none;
+		}
+	}
+	
+	@media (max-width:500px)
+	{
+		header .topick {font-size:30px; }
+		header #name {font-size:17px;}
+	}
+	
+	@media (max-width:400px)
+	{
+		header .topick {font-size:26px;}
+		header #name {font-size:14px;}
+	}
+	
+	@media (max-width:350px)
+	{
+		header .topick {font-size:23px;}
+		header #name {font-size:13px;}
+	}
+
+	@media (max-width:300px)
+	{
+
+		
+		@media (max-height: 750px) 
+		{
+			header .topick {font-size:20px;  width: 85%;}
+			header #name {font-size:9; width: 95%;}
+
+		}
+		
+		
+	}
+	
+	
