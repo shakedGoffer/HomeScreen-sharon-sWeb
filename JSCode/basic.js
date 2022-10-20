@@ -6,11 +6,20 @@ var bgDiv = document.getElementsByClassName("bg")[0];
 var i=0;
 btnMenu.addEventListener("mouseover", func, false);
 
+if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) 
+{
+    i=0;
+	if ( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) 
+	{
+	  // This checks if the current device is in fact mobile
+		menuContent.setAttribute("style", "display: none;");
+		navMenu.setAttribute("style", "min-height: 0vh; height:0%;");
+		bgDiv.setAttribute("style", "visibility: hidden;");
+	}
+}
 
-if (
-  navigator.userAgent.match(/Android/i) ||
-  navigator.userAgent.match(/iPhone/i)
-) 
+
+if ( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) 
 {
   // This checks if the current device is in fact mobile
 	menuContent.setAttribute("style", "display: none;");
@@ -20,27 +29,24 @@ if (
 
 function func()
 {  
-	if (
-  navigator.userAgent.match(/Android/i) ||
-  navigator.userAgent.match(/iPhone/i)
-) 
+	if ( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) 
 	{
 	  // This checks if the current device is in fact mobile
 	
-	if(i%2==0)
-	{
-		menuContent.setAttribute("style", "display: normal;");
-		navMenu.setAttribute("style", "min-height: 100vh; height:100%;");
-		bgDiv.setAttribute("style", "visibility: visible;");
-	}
-	else
-	{
-		menuContent.setAttribute("style", "display: none;");
-		navMenu.setAttribute("style", "min-height: 0vh; height:0%;");
-		bgDiv.setAttribute("style", "visibility: hidden;");
-	}
-		
-	i++;
+		if(i%2==0)
+		{
+			menuContent.setAttribute("style", "display: normal;");
+			navMenu.setAttribute("style", "min-height: 100vh; height:100%;");
+			bgDiv.setAttribute("style", "visibility: visible;");
+		}
+		else
+		{
+			menuContent.setAttribute("style", "display: none;");
+			navMenu.setAttribute("style", "min-height: 0vh; height:0%;");
+			bgDiv.setAttribute("style", "visibility: hidden;");
+		}
+			
+		i++;
 	}
 }
 
